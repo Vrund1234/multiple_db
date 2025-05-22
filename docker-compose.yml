@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 version: "3.8"
 
 services:
@@ -20,3 +21,27 @@ services:
     depends_on:
       - backend
     restart: unless-stopped
+=======
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "5000:5000"
+    environment:
+      - GOOGLE_API_KEY=AIzaSyCKx7VQ7VgmzMk2WO68IMh0uVcfNcwovsY  # Or set it in backend.py using env var
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    restart: unless-stopped
+>>>>>>> e9340ba3d8bdde2efb90e68c0ff68ffd7529c477
