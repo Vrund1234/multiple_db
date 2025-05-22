@@ -1,0 +1,14 @@
+streamlit
+flask
+requests
+pymongo
+mysql-connector-python
+pyodbc
+google-generativeai
+gunicorn
+psycopg2-binary
+
+
+
+
+
